@@ -744,6 +744,52 @@ readStaticLeasesFile();
 					<textarea name="clients" class="form-control" rows="4" placeholder="Enter one IP address or host name per line"><?php foreach ($excludedClients as $client) { echo $client."\n"; } ?></textarea>
 					</div>
 				</div>
+				<div class="col-lg-12">
+					<div class="box box-success collapsed-box">
+						<div class="box-header with-border">
+							<h3 class="box-title">Exclude filter details</h3>
+							<div class="box-tools pull-right"><button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button></div>
+						</div>
+						<div class="box-body">
+							<div class="col-lg-12">
+							<table width="100%" border="1" cellpadding="3">
+								<tr>
+									<th align="center">Entry</th>
+									<th colspan="4" align="center">Domain</th>
+								</tr>
+								<tr>
+									<td align="center">&darr;</td>
+									<td>abc.com</td>
+									<td>some.abc.com</td>
+									<td>someabc.com</td>
+									<td>xyz.someabc.com</td>
+								</tr>
+								<tr>
+									<td>abc.de</td>
+									<td class="hiddentab">hidden</td>
+									<td class="showntab">shown</td>
+									<td class="showntab">shown</td>
+									<td class="showntab">shown</td>
+								</tr>
+								<tr>
+									<td>*.abc.de</td>
+									<td class="showntab">shown</td>
+									<td class="hiddentab">hidden</td>
+									<td class="showntab">shown</td>
+									<td class="showntab">shown</td>
+								</tr>
+								<tr>
+									<td>*abc.de</td>
+									<td class="hiddentab">hidden</td>
+									<td class="hiddentab">hidden</td>
+									<td class="hiddentab">hidden</td>
+									<td class="hiddentab">hidden</td>
+								</tr>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
 				<h4>Privacy settings (Statistics / Query Log)</h4>
 				<div class="col-lg-6">
 					<div class="form-group">
